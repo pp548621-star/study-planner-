@@ -81,11 +81,3 @@ The app uses browser-local storage, so each visitor gets a separate workspace on
 ## Resume description
 
 Built a responsive, browser-first student productivity app with task CRUD, subject organization, deadline filtering, progress charts, and a Pomodoro timer using Next.js, TypeScript, Tailwind CSS, Recharts, Lucide, and `localStorage`.
-
-## Beginner-friendly interview questions
-
-1. **Why did you use `localStorage`?** For this first version, it keeps the app simple and works without a server. It is device- and browser-specific, so it is not secure multi-user storage or cross-device sync.
-2. **How are the dashboard numbers calculated?** The UI derives totals from the saved task array. Completion history uses each task’s actual `completedAt` timestamp instead of hardcoded activity.
-3. **How does the app handle invalid saved data?** It parses and validates stored values before using them. Invalid JSON or mismatched shapes are discarded in favor of safe defaults.
-4. **How do you avoid losing tasks when deleting a subject?** The user must move linked tasks to another subject first; the delete action is blocked if no valid destination is selected.
-5. **Why is the project built with Next.js and TypeScript rather than Vite and JavaScript?** The supplied project already used Next.js and TypeScript, so I kept its working framework and focused the changes on the requested browser-only product features.
